@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Coloca o botão e o jogo em coluna */
+  height: 100vh; /* Garante que tudo fique centralizado verticalmente */
+  margin: 0; /* Remove margens padrão do body */
+  background: #f5f5f5; /* Fundo da página */
+}
+
+#game-container {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  background: white;
+  overflow: hidden;
+  border: 2px solid #ccc; /* Adiciona uma borda para destaque */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um visual mais elegante */
+}
+
+#start-button {
+  margin-bottom: 20px; /* Espaço entre o botão e o jogo */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007BFF; /* Azul do botão */
+  color: rgb(0, 0, 0); /* Texto branco */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s ease; /* Animação de hover */
+}
+
+#start-button:hover {
+  background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+#player {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 120px; /* Aumentado a largura da div */
+  height: 140px; /* Aumentado a altura da div */
+  background-image: url('imagem/NC.gif');
+  background-size: 125% 100%; /* Aumenta o tamanho da imagem para cobrir toda a div */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#obstacle {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 50px;  /* Ajuste o tamanho conforme necessário */
+  height: 60px; /* Ajuste o tamanho conforme necessário */
+  background-image: url('../imagem/I.gif'); /* Caminho para a imagem do obstáculo */
+  background-size: 100% 100%; /* Ajusta a imagem para cobrir o elemento */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-position: center; /* Centraliza a imagem dentro do elemento */
+}
+
+#coin {
+  width: 30px; /* Largura da moeda */
+  height: 30px; /* Altura da moeda */
+  position: absolute; /* Para posicionamento livre no container */
+  display: none; /* Inicialmente invisível */
+  background-image: url('../imagem/coin.jpg'); /* Caminho para a imagem da moeda */
+  background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+  background-repeat: no-repeat;
+  z-index: 10; /* Garante que a moeda fique visível acima de outros elementos */
+}
+
+#boss {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 140px;
+  background-image: url('../imagem/boss.gif'); /* Caminho para a imagem do chefe */
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; /* Inicialmente oculto */
+  z-index: 5;
+}
+
+#score-display,
+#timer-display {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+#boss {
+  position: absolute;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-image: url('../imagem/m.png'); /* Imagem do boss */
+  transition: left 0.2s ease;
+}

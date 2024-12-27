@@ -1,0 +1,211 @@
+/* Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fundo claro */
+    color: #333;
+}
+
+/* Centralizar a imagem do topo */
+.center-img {
+    display: block;
+    margin: 20px auto;
+    width: 60px; /* Ajuste do tamanho da imagem */
+    height: auto;
+}
+
+/* Estilo para o nav fixo no topo */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixa a barra de navegação */
+    top: 0; /* Fixa no topo da página */
+    width: 100%; /* Garante que o nav ocupe toda a largura da tela */
+    z-index: 1000; /* Garante que o nav fique acima de outros elementos */
+    flex-direction: column; /* Organiza os elementos da navegação em coluna */
+}
+
+/* Estilo para a imagem dentro da nav */
+nav img {
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    z-index: 1001; /* Garante que a imagem fique acima dos links */
+}
+
+/* Estilo dos itens da lista no nav */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 40px 0 0 0; /* Espaço entre a imagem e os links */
+}
+
+nav li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Adicionando um espaçamento para o conteúdo abaixo do nav fixo */
+body {
+    padding-top: 90px; /* Ajuste conforme a altura do nav */
+}
+
+/* Estilo para o layout de grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas maiores */
+    gap: 40px; /* Espaçamento entre as caixas */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo das caixas */
+.box {
+    background-color: #fff; /* Fundo branco para destaque */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Elevação ao passar o mouse */
+    background-color: #f1f1f1; /* Fundo mais claro ao passar o mouse */
+}
+
+/* Imagens dentro das caixas */
+.box img {
+    width: 100px; /* Tamanho da imagem */
+    height: auto;
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas para tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        margin: 10px;
+    }
+}
+
+/* Estilo para centralizar o conteúdo dentro da div .CH */
+/* Estilo para centralizar o conteúdo dentro da div .CH */
+.CH {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* Garantir que ocupe a altura total da tela */
+    background-color: #F6F7FA; /* Cor de fundo */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer p,
+footer a {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0;
+}
+
+footer a:hover {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer .payment-logos {
+    display: flex;
+    gap: 20px;
+}
+
+footer .payment-logos img {
+    width: 40px;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../imagem/OIP.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    padding-top: 20%;
+    z-index: 1;
+    position: relative;
+}
+
+
+main {
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.2em;
+
+}
+
+.imagem-container {
+
+    text-align: center;
+    width: 46%;
+    height: 60vh;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.imagens {
+    text-align: center;
+    display: flex;
+    width: 400%; 
+    animation: slide 10s infinite; 
+}
+
+.imagens img {
+    text-align: center;
+    width: 25%; 
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes slide {
+    0%, 20% {
+        transform: translateX(0);  
+    }
+    25%, 45% {
+        transform: translateX(-25%);  
+    }
+    50%, 70% {
+        transform: translateX(-50%); 
+    }
+    75%, 100% {
+        transform: translateX(-75%);  
+    }
+}
+
+.E {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .E img {
+    width: 170px;
+    height: 170px;
+   border-radius: 1000px;
+
+  }
+
+
